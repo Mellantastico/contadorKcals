@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Consumption History</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-white/10">
+<div class="flex items-center p-4 justify-between max-w-md mx-auto">
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<h2 class="text-lg font-bold leading-tight tracking-tight">History</h2>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-slate-200 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined">calendar_month</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-md mx-auto pb-20">
+<!-- Stats Section -->
+<div class="p-4">
+<div class="flex flex-wrap gap-3">
+<div class="flex min-w-[100px] flex-1 flex-col gap-1 rounded-xl p-4 border border-slate-200 dark:border-white/10 bg-white/50 dark:bg-white/5">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-wider">Avg. Daily</p>
+<p class="text-2xl font-bold leading-tight">1,942 <span class="text-xs font-normal text-slate-400">kcal</span></p>
+</div>
+<div class="flex min-w-[100px] flex-1 flex-col gap-1 rounded-xl p-4 border border-slate-200 dark:border-white/10 bg-white/50 dark:bg-white/5 border-l-primary/30">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-wider">Goal Met</p>
+<p class="text-2xl font-bold leading-tight text-primary">12 <span class="text-xs font-normal text-slate-400">days</span></p>
+</div>
+</div>
+</div>
+<!-- SectionHeader -->
+<div class="px-4 pt-2">
+<h3 class="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-widest">Recent Logs</h3>
+</div>
+<!-- Progress Log Card (Today) -->
+<div class="px-4 py-3">
+<div class="bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl p-4">
+<div class="flex flex-col gap-3">
+<div class="flex gap-6 justify-between items-end">
+<div>
+<p class="text-xs font-bold text-primary uppercase tracking-tighter">Current Today</p>
+<p class="text-xl font-bold leading-none">Thursday, Oct 15</p>
+</div>
+<p class="text-sm font-semibold leading-normal">1,850 <span class="text-slate-400 font-normal">/ 2,000</span></p>
+</div>
+<div class="h-2.5 w-full rounded-full bg-slate-200 dark:bg-white/10 overflow-hidden">
+<div class="h-full rounded-full bg-primary" style="width: 92%;"></div>
+</div>
+<div class="flex justify-between items-center">
+<p class="text-primary text-xs font-semibold">92% of daily goal</p>
+<p class="text-slate-400 text-xs">Remaining: 150 kcal</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Accordions List -->
+<div class="flex flex-col px-4 gap-2">
+<!-- Yesterday -->
+<details class="group bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl overflow-hidden" open="">
+<summary class="flex cursor-pointer items-center justify-between p-4 list-none">
+<div class="flex flex-col">
+<p class="text-sm font-bold">Yesterday, Oct 14</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">2,100 / 2,000 kcal • <span class="text-orange-400">+100</span></p>
+</div>
+<div class="flex items-center gap-3">
+<div class="size-2 rounded-full bg-orange-400"></div>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180 text-slate-400">expand_more</span>
+</div>
+</summary>
+<div class="px-4 pb-4 border-t border-slate-100 dark:border-white/5 mt-1 pt-3">
+<div class="space-y-4">
+<div class="flex justify-between items-start">
+<div class="flex gap-3">
+<div class="size-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-sm">restaurant</span>
+</div>
+<div>
+<p class="text-sm font-semibold">Avocado Toast <span class="ml-1 px-1.5 py-0.5 rounded-full bg-primary/20 text-primary text-[10px] font-bold uppercase">Preset</span></p>
+<p class="text-xs text-slate-500">Breakfast • 08:30 AM</p>
+</div>
+</div>
+<p class="text-sm font-bold">450 kcal</p>
+</div>
+<div class="flex justify-between items-start">
+<div class="flex gap-3">
+<div class="size-8 rounded-lg bg-slate-100 dark:bg-white/10 flex items-center justify-center text-slate-400">
+<span class="material-symbols-outlined text-sm">lunch_dining</span>
+</div>
+<div>
+<p class="text-sm font-semibold">Chicken Caesar Salad</p>
+<p class="text-xs text-slate-500">Lunch • 01:15 PM</p>
+</div>
+</div>
+<p class="text-sm font-bold">650 kcal</p>
+</div>
+<div class="flex justify-between items-start">
+<div class="flex gap-3">
+<div class="size-8 rounded-lg bg-slate-100 dark:bg-white/10 flex items-center justify-center text-slate-400">
+<span class="material-symbols-outlined text-sm">dinner_dining</span>
+</div>
+<div>
+<p class="text-sm font-semibold">Grilled Salmon &amp; Quinoa</p>
+<p class="text-xs text-slate-500">Dinner • 07:45 PM</p>
+</div>
+</div>
+<p class="text-sm font-bold">1,000 kcal</p>
+</div>
+</div>
+</div>
+</details>
+<!-- Oct 13 -->
+<details class="group bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl overflow-hidden">
+<summary class="flex cursor-pointer items-center justify-between p-4 list-none">
+<div class="flex flex-col">
+<p class="text-sm font-bold">Tuesday, Oct 13</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">1,920 / 2,000 kcal • <span class="text-primary">-80</span></p>
+</div>
+<div class="flex items-center gap-3">
+<div class="size-2 rounded-full bg-primary"></div>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180 text-slate-400">expand_more</span>
+</div>
+</summary>
+<div class="px-4 pb-4 border-t border-slate-100 dark:border-white/5 mt-1 pt-3">
+<p class="text-slate-500 text-xs italic">Tap to see detailed breakdown...</p>
+</div>
+</details>
+<!-- Oct 12 -->
+<details class="group bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl overflow-hidden">
+<summary class="flex cursor-pointer items-center justify-between p-4 list-none">
+<div class="flex flex-col">
+<p class="text-sm font-bold">Monday, Oct 12</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">1,880 / 2,000 kcal • <span class="text-primary">-120</span></p>
+</div>
+<div class="flex items-center gap-3">
+<div class="size-2 rounded-full bg-primary"></div>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180 text-slate-400">expand_more</span>
+</div>
+</summary>
+<div class="px-4 pb-4 border-t border-slate-100 dark:border-white/5 mt-1 pt-3">
+<p class="text-slate-500 text-xs italic text-center py-2">Loading previous entries...</p>
+</div>
+</details>
+</div>
+<!-- Load More / Empty State Spacer -->
+<div class="flex justify-center p-8">
+<button class="px-6 py-2 rounded-full border border-slate-200 dark:border-white/10 text-xs font-bold uppercase tracking-widest text-slate-500 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors">
+                Load Oct 1 - Oct 11
+            </button>
+</div>
+</main>
+<!-- Navigation Tab Bar (iOS Style) -->
+<nav class="fixed bottom-0 left-0 right-0 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-xl border-t border-slate-200 dark:border-white/10 z-50">
+<div class="max-w-md mx-auto flex justify-around p-3">
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined">history</span>
+<span class="text-[10px] font-medium">History</span>
+</button>
+<button class="flex flex-col items-center justify-center size-12 -mt-6 bg-primary rounded-full text-background-dark shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined font-bold">add</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">restaurant</span>
+<span class="text-[10px] font-medium">Presets</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</div>
+</nav>
+</body></html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Food Presets Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/style/global.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script href="/scripts/tailwind-config.js"></script>
+
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen flex flex-col">
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 ios-blur border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center p-4 pb-2 justify-between max-w-md mx-auto w-full">
+<div class="flex size-10 shrink-0 items-center justify-start cursor-pointer">
+<span class="material-symbols-outlined text-2xl">arrow_back_ios</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">Food Presets</h2>
+</div>
+<div class="px-4 py-3 max-w-md mx-auto w-full">
+<label class="flex flex-col min-w-40 h-11 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full overflow-hidden">
+<div class="text-slate-500 dark:text-[#9db9a8] flex border-none bg-slate-200 dark:bg-[#28392f] items-center justify-center pl-4">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden text-slate-900 dark:text-white focus:outline-0 focus:ring-0 border-none bg-slate-200 dark:bg-[#28392f] focus:border-none h-full placeholder:text-slate-500 dark:placeholder:text-[#9db9a8] px-3 text-base font-normal leading-normal" placeholder="Search your presets..." value=""/>
+</div>
+</label>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto px-4 py-4 space-y-4 max-w-md mx-auto w-full pb-32">
+<div class="bg-white dark:bg-[#1a2e23] border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm">
+<div class="p-4">
+<div class="flex items-center justify-between gap-4">
+<div class="flex flex-col gap-1 flex-1">
+<div class="flex items-center gap-2">
+<p class="text-slate-900 dark:text-white text-base font-bold leading-tight">Morning Oats</p>
+<span class="bg-primary/20 text-primary text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded">Breakfast</span>
+</div>
+<p class="text-slate-500 dark:text-[#9db9a8] text-sm font-medium leading-normal">350 kcal • 1 bowl</p>
+<div class="flex gap-2 mt-3">
+<button class="flex items-center justify-center rounded-lg h-8 px-3 bg-slate-100 dark:bg-[#28392f] text-slate-700 dark:text-white gap-1.5 text-xs font-semibold leading-normal transition-colors active:scale-95">
+<span class="material-symbols-outlined text-base">edit</span>
+<span>Edit</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-8 px-3 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 gap-1.5 text-xs font-semibold leading-normal transition-colors active:scale-95">
+<span class="material-symbols-outlined text-base">delete</span>
+<span>Delete</span>
+</button>
+</div>
+</div>
+<div class="size-20 bg-center bg-no-repeat bg-cover rounded-lg shrink-0 border border-slate-100 dark:border-slate-700" data-alt="bowl of oatmeal with fresh blueberries" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC-RW4oTMS3TbHU5spB7dtcJdAFtevBsHwQwC3_ic7hCCyFU7Cbt361btgkIqF9SpBugSgion_n8--9SaJA9S5JtjTNDNsSX2a-6mghuwA-d4hD-Erb4p8NeJia4sOt5Kg2bZ_1CfMQ5kTiS0Dw-uZxR8laZUVjcz2udxdN5hmCrcu3XQ1JKQj5_YrfvlRbeIhkt49oLWFiO-DjSFRcu5AeNqkkZFkxNh_KZrAhM5W9eFXtdGoeHTB6NSowBh69pd_7NVLSgWk7MQ");'></div>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-[#1a2e23] border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm">
+<div class="p-4">
+<div class="flex items-center justify-between gap-4">
+<div class="flex flex-col gap-1 flex-1">
+<div class="flex items-center gap-2">
+<p class="text-slate-900 dark:text-white text-base font-bold leading-tight">Protein Shake</p>
+<span class="bg-primary/20 text-primary text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded">Post-Workout</span>
+</div>
+<p class="text-slate-500 dark:text-[#9db9a8] text-sm font-medium leading-normal">180 kcal • 500ml</p>
+<div class="flex gap-2 mt-3">
+<button class="flex items-center justify-center rounded-lg h-8 px-3 bg-slate-100 dark:bg-[#28392f] text-slate-700 dark:text-white gap-1.5 text-xs font-semibold leading-normal transition-colors active:scale-95">
+<span class="material-symbols-outlined text-base">edit</span>
+<span>Edit</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-8 px-3 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 gap-1.5 text-xs font-semibold leading-normal transition-colors active:scale-95">
+<span class="material-symbols-outlined text-base">delete</span>
+<span>Delete</span>
+</button>
+</div>
+</div>
+<div class="size-20 bg-center bg-no-repeat bg-cover rounded-lg shrink-0 border border-slate-100 dark:border-slate-700" data-alt="protein shake in a shaker bottle" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBFogwyyrajvvHvzJnjzZHxXUjg8OJl1Rm7ZQ6u1TMRjHMGbdX357e7cviP59P2dKmlLboC2j5PqmjusCeJJdIo27zkDZe0q6Alys7IhEhoSKdq7dTykkePGjMu8xKVHsPVT3Nf5OozII1J1q_vcwPyvPDtnIdQC_pr5jlJTiaJRvwhylHTzF24gvhuUg9v30D5bE6rzD6OesEYhfmluNJ9rSolQJlDQwBbjK7nHmcq6Ww7xVQ2WwZfVW7-0ynHiDPGNMXXdxxrYA");'></div>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-[#1a2e23] border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm">
+<div class="p-4">
+<div class="flex items-center justify-between gap-4">
+<div class="flex flex-col gap-1 flex-1">
+<div class="flex items-center gap-2">
+<p class="text-slate-900 dark:text-white text-base font-bold leading-tight">Avocado Toast</p>
+<span class="bg-primary/20 text-primary text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded">Snack</span>
+</div>
+<p class="text-slate-500 dark:text-[#9db9a8] text-sm font-medium leading-normal">420 kcal • 2 slices</p>
+<div class="flex gap-2 mt-3">
+<button class="flex items-center justify-center rounded-lg h-8 px-3 bg-slate-100 dark:bg-[#28392f] text-slate-700 dark:text-white gap-1.5 text-xs font-semibold leading-normal transition-colors active:scale-95">
+<span class="material-symbols-outlined text-base">edit</span>
+<span>Edit</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-8 px-3 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 gap-1.5 text-xs font-semibold leading-normal transition-colors active:scale-95">
+<span class="material-symbols-outlined text-base">delete</span>
+<span>Delete</span>
+</button>
+</div>
+</div>
+<div class="size-20 bg-center bg-no-repeat bg-cover rounded-lg shrink-0 border border-slate-100 dark:border-slate-700" data-alt="toasted bread with mashed avocado and seeds" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCUryoSiagBjjGjUC_DGJuN08RmpZ_goBAS8vnuYlmtXrWSHZVmfSxfsvkiYF5SE2O_WLqEgY8BIILlhw4dNnZ-i8fGKo4qDffb30lKUdt7SPp5NrN1H5t3Lqse-ehB8lMa5rKnyrPghm78pRKcM8QzN145dz6MOkzMcJQrhwi3ErKYtSd89FfAOHSWJcFHVHtz0xYCuj4aka-DBKDA0o-2YHQX_-C86M9Oz3_1t2PscZ455iYBaMk_vPphwADueSvG7ARSTVWlAg");'></div>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-[#1a2e23] border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm">
+<div class="p-4">
+<div class="flex items-center justify-between gap-4">
+<div class="flex flex-col gap-1 flex-1">
+<div class="flex items-center gap-2">
+<p class="text-slate-900 dark:text-white text-base font-bold leading-tight">Greek Yogurt &amp; Honey</p>
+<span class="bg-primary/20 text-primary text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded">Dessert</span>
+</div>
+<p class="text-slate-500 dark:text-[#9db9a8] text-sm font-medium leading-normal">210 kcal • 150g</p>
+<div class="flex gap-2 mt-3">
+<button class="flex items-center justify-center rounded-lg h-8 px-3 bg-slate-100 dark:bg-[#28392f] text-slate-700 dark:text-white gap-1.5 text-xs font-semibold leading-normal transition-colors active:scale-95">
+<span class="material-symbols-outlined text-base">edit</span>
+<span>Edit</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-8 px-3 bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 gap-1.5 text-xs font-semibold leading-normal transition-colors active:scale-95">
+<span class="material-symbols-outlined text-base">delete</span>
+<span>Delete</span>
+</button>
+</div>
+</div>
+<div class="size-20 bg-center bg-no-repeat bg-cover rounded-lg shrink-0 border border-slate-100 dark:border-slate-700" data-alt="greek yogurt with drizzled honey in bowl" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBcYa1dQtq7tGx8S1VwLUh-2FVueX-2vmJvahu2MjTn2wGvg5PhmOXT9pA1EA7kyoZpaZCH4BUsLbFJ4nDTe1PRmU3vCUbaucgPXNXnbTK8ImRtAftlK_dKQ9fb3UgG_QzCZCvOhIeaoGVuAJxWikR4dRa-g9SEyGvpYplpnlZqnFPI0VnVV7wcDb94KPVSoedxIWP5hz_IZufbIEzHz3anaJXkzoaJROxLJcJgN_7p4du84dFl6rGYX4tBY0ODv5lR7LFEaFCRQQ");'></div>
+</div>
+</div>
+</div>
+</main>
+<div class="fixed bottom-0 left-0 right-0 p-6 ios-blur bg-background-light/80 dark:bg-background-dark/80 z-50">
+<div class="max-w-md mx-auto w-full">
+<button class="flex w-full items-center justify-center gap-2 rounded-xl bg-primary h-14 text-background-dark font-bold text-base shadow-lg shadow-primary/20 transition-transform active:scale-95">
+<span class="material-symbols-outlined text-2xl">add_circle</span>
+<span>Add New Preset</span>
+</button>
+</div>
+</div>
+</body></html>

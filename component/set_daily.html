@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Set Daily Calorie Goal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2bee7c",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#102218",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col font-display transition-colors duration-300">
+<!-- Top Navigation Bar -->
+<header class="flex items-center px-4 py-6 justify-between">
+<button id="backIndex" class="text-white bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors">
+<span class="material-symbols-outlined block">arrow_back_ios_new</span>
+</button>
+<h2 class="text-white text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">Fuel Your Journey</h2>
+</header>
+<main class="flex-1 flex flex-col px-6">
+<!-- Headline Section -->
+<div class="mt-8 text-center">
+<h1 class="text-white tracking-tight text-[32px] font-bold leading-tight pb-3">Set Your Daily Target</h1>
+<p class="text-white/70 text-base font-normal leading-normal">Enter your daily calorie goal to stay on track.</p>
+</div>
+<!-- Visual Centered Input Section -->
+<div class="flex-1 flex flex-col justify-center items-center py-12">
+<div class="relative group">
+<!-- Ambient Glow Effect -->
+<div class="absolute -inset-4 bg-primary/20 rounded-full blur-3xl opacity-50 group-focus-within:opacity-100 transition-opacity"></div>
+<div class="relative flex flex-col items-center">
+<div class="flex items-baseline gap-2">
+<input id="misKcals" autofocus="" class="bg-transparent border-none text-white text-7xl font-bold text-center focus:ring-0 focus:outline-none w-64 placeholder:text-white/20" placeholder="2000" type="number"/>
+</div>
+<div class="mt-4 flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full">
+<span class="material-symbols-outlined text-primary text-xl">local_fire_department</span>
+<span class="text-white/80 text-lg font-medium">kcal per day</span>
+</div>
+</div>
+</div>
+<!-- Helpful Suggestion Link -->
+<button class="mt-12 text-primary font-medium flex items-center gap-2 hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-[20px]">calculate</span>
+                Calculate my ideal goal
+            </button>
+</div>
+<!-- Footer Action Area -->
+<div class="pb-10 pt-4 space-y-4">
+<p class="text-white/40 text-sm font-normal text-center mb-6">
+                Most adults need around 2,000 kcal per day.<br/>You can change this anytime in settings.
+            </p>
+<button id="saveKcals" class="w-full bg-primary text-[#102218] font-bold py-4 rounded-xl text-lg hover:scale-[1.02] active:scale-[0.98] transition-all shadow-lg shadow-primary/20">
+                Save &amp; Continue
+            </button>
+<!-- Progress Indicator -->
+<div class="flex justify-center gap-2 pt-2">
+<div class="h-1.5 w-8 rounded-full bg-primary"></div>
+<div class="h-1.5 w-2 rounded-full bg-white/20"></div>
+<div class="h-1.5 w-2 rounded-full bg-white/20"></div>
+</div>
+</div>
+</main>
+<!-- iOS Indicator Mock (Visual Only) -->
+<div class="h-1.5 w-32 bg-white/20 mx-auto mb-2 rounded-full"></div>
+</body>
+<script src="../scripts/index.js"></script>
+<script src="../scripts/set_daily.js"></script>
+</html>

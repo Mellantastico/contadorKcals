@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Daily Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style/global.css">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2bee7c",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#102218",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+</script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen flex flex-col font-display">
+<!-- Top Navigation Bar -->
+<header class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">
+<div class="text-slate-700 dark:text-white flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined">calendar_today</span>
+</div>
+<div class="flex flex-col items-center">
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Daily Dashboard</h2>
+<p class="text-xs text-slate-500 dark:text-primary font-medium uppercase tracking-wider">Today, Oct 24</p>
+</div>
+<div class="flex w-12 items-center justify-end">
+<button class="flex cursor-pointer items-center justify-center rounded-full h-10 w-10 bg-slate-200 dark:bg-primary/20 text-slate-900 dark:text-primary">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto pb-24">
+<!-- Calories Visualization -->
+<div class="flex flex-col items-center justify-center py-8 px-4">
+<div class="relative flex items-center justify-center w-64 h-64">
+<!-- SVG Progress Circle -->
+<svg class="w-full h-full">
+<circle class="text-slate-200 dark:text-white/10" cx="128" cy="128" fill="transparent" r="110" stroke="currentColor" stroke-width="12"></circle>
+<circle class="text-primary" cx="128" cy="128" fill="transparent" r="110" stroke="currentColor" stroke-dasharray="691" stroke-dashoffset="240" stroke-linecap="round" stroke-width="12" style="transform: rotate(-90deg); transform-origin: center;"></circle>
+</svg>
+<!-- Central Text -->
+<div class="absolute flex flex-col items-center justify-center text-center">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Remaining</p>
+<p class="text-slate-900 dark:text-white text-5xl font-bold tracking-tight" id="dailyGoalKcal"></p>
+<p class="text-slate-500 dark:text-slate-400 text-sm">kcal</p>
+</div>
+</div>
+</div>
+<!-- Stats Grid -->
+<div class="flex flex-wrap gap-4 px-4 pb-6">
+<div class="flex min-w-[140px] flex-1 flex-col gap-1 rounded-xl p-4 bg-white dark:bg-[#1a2e23] border border-slate-200 dark:border-white/5 shadow-sm">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-sm">restaurant</span>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium leading-normal">Consumed</p>
+</div>
+<p class="text-slate-900 dark:text-white tracking-light text-xl font-bold">760 kcal</p>
+</div>
+<div class="flex min-w-[140px] flex-1 flex-col gap-1 rounded-xl p-4 bg-white dark:bg-[#1a2e23] border border-slate-200 dark:border-white/5 shadow-sm">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-sm">fitness_center</span>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium leading-normal">Burned</p>
+</div>
+<p class="text-slate-900 dark:text-white tracking-light text-xl font-bold">120 kcal</p>
+</div>
+</div>
+<!-- Macro Progress Bars -->
+<div class="px-4 space-y-4 mb-6">
+<div class="flex flex-col gap-2">
+<div class="flex justify-between text-xs font-semibold">
+<span class="text-slate-500 dark:text-slate-400">Protein</span>
+<span class="text-slate-900 dark:text-white">65g / 150g</span>
+</div>
+<div class="h-1.5 w-full bg-slate-200 dark:bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 43%;"></div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between text-xs font-semibold">
+<span class="text-slate-500 dark:text-slate-400">Carbs</span>
+<span class="text-slate-900 dark:text-white">120g / 200g</span>
+</div>
+<div class="h-1.5 w-full bg-slate-200 dark:bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-blue-400" style="width: 60%;"></div>
+</div>
+</div>
+</div>
+<!-- Quick Add Section -->
+<div class="bg-white dark:bg-white/5 rounded-t-3xl pt-6 pb-12">
+<div class="flex items-center justify-between px-6 mb-4">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Quick Add</h3>
+<button class="text-primary text-sm font-semibold">Edit Presets</button>
+</div>
+<div class="grid grid-cols-2 gap-4 px-6">
+<!-- Preset Card 1 -->
+<button class="flex flex-col items-start gap-3 p-4 rounded-xl bg-slate-100 dark:bg-background-dark border border-transparent hover:border-primary transition-all text-left">
+<div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">breakfast_dining</span>
+</div>
+<div>
+<p class="text-slate-900 dark:text-white text-sm font-bold leading-tight">Oatmeal</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-0.5">300 kcal</p>
+</div>
+</button>
+<!-- Preset Card 2 -->
+<button class="flex flex-col items-start gap-3 p-4 rounded-xl bg-slate-100 dark:bg-background-dark border border-transparent hover:border-primary transition-all text-left">
+<div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">coffee</span>
+</div>
+<div>
+<p class="text-slate-900 dark:text-white text-sm font-bold leading-tight">Black Coffee</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-0.5">5 kcal</p>
+</div>
+</button>
+<!-- Preset Card 3 -->
+<button class="flex flex-col items-start gap-3 p-4 rounded-xl bg-slate-100 dark:bg-background-dark border border-transparent hover:border-primary transition-all text-left">
+<div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">shutter_speed</span>
+</div>
+<div>
+<p class="text-slate-900 dark:text-white text-sm font-bold leading-tight">Protein Shake</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-0.5">180 kcal</p>
+</div>
+</button>
+<!-- Preset Card 4 -->
+<button class="flex flex-col items-start gap-3 p-4 rounded-xl bg-slate-100 dark:bg-background-dark border border-transparent hover:border-primary transition-all text-left">
+<div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">nutrition</span>
+</div>
+<div>
+<p class="text-slate-900 dark:text-white text-sm font-bold leading-tight">Green Apple</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-0.5">95 kcal</p>
+</div>
+</button>
+</div>
+</div>
+</main>
+<!-- Floating Action Button -->
+<div class="fixed bottom-8 right-6">
+<button class="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-background-dark shadow-lg shadow-primary/20 hover:scale-105 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-3xl font-bold">add</span>
+</button>
+</div>
+<!-- Bottom Navigation Bar (iOS style) -->
+<nav class="fixed bottom-0 w-full bg-white dark:bg-background-dark border-t border-slate-200 dark:border-white/5 px-6 py-3 flex justify-between items-center z-10">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px] font-medium">Daily</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-[10px] font-medium">Trends</span>
+</button>
+<div class="w-16"></div> <!-- Spacer for FAB area if centered, but here FAB is offset -->
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="text-[10px] font-medium">Recipes</span>
+</button>
+<button id="setting" type="button" class="flex flex-col items-center gap-1 text-slate-400" >
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-medium">Settings</span>
+</button>
+</nav>
+<!-- Safe Area Background (iOS) -->
+<div class="h-6 bg-white dark:bg-background-dark w-full fixed bottom-0"></div>
+</body>
+<script src="scripts/index.js"></script>
+</html>
