@@ -62,16 +62,16 @@
 </div>
 </div>
 </div>
-<!-- Stats Grid -->
-<div class="flex flex-wrap gap-4 px-4 pb-6">
-<div class="flex min-w-[140px] flex-1 flex-col gap-1 rounded-xl p-4 bg-white dark:bg-[#1a2e23] border border-slate-200 dark:border-white/5 shadow-sm">
+<!-- select momento del dia -->
+ <div class="flex flex-wrap gap-4 px-4 py-6">
+<div class="flex min-w-[140px] flex-1 flex-col gap-1 rounded-xl p-4 bg-white dark:bg-background-dark dark:bg-card-dark border border-slate-200 dark:border-white/5 shadow-sm">
 <div class="flex items-center gap-2 text-primary">
 <span class="material-symbols-outlined text-sm">restaurant</span>
 <p class="text-slate-500 dark:text-slate-400 text-xs font-medium leading-normal">Consumed</p>
 </div>
 <p class="text-slate-900 dark:text-white tracking-light text-xl font-bold">760 kcal</p>
 </div>
-<div class="flex min-w-[140px] flex-1 flex-col gap-1 rounded-xl p-4 bg-white dark:bg-[#1a2e23] border border-slate-200 dark:border-white/5 shadow-sm">
+<div class="flex min-w-[140px] flex-1 flex-col gap-1 rounded-xl p-4 bg-white dark:bg-background-dark  dark:bg-card-dark border border-slate-200 dark:border-white/5 shadow-sm">
 <div class="flex items-center gap-2 text-primary">
 <span class="material-symbols-outlined text-sm">fitness_center</span>
 <p class="text-slate-500 dark:text-slate-400 text-xs font-medium leading-normal">Burned</p>
@@ -79,97 +79,116 @@
 <p class="text-slate-900 dark:text-white tracking-light text-xl font-bold">120 kcal</p>
 </div>
 </div>
-<!-- Macro Progress Bars -->
-<div class="px-4 space-y-4 mb-6">
-<div class="flex flex-col gap-2">
-<div class="flex justify-between text-xs font-semibold">
-<span class="text-slate-500 dark:text-slate-400">Protein</span>
-<span class="text-slate-900 dark:text-white">65g / 150g</span>
+<!-- Stats Grid -->
+<div class="px-4 mb-6">
+<button class="w-full flex items-center justify-between p-6 rounded-2xl bg-white dark:bg-background-dark  dark:bg-card-dark border border-slate-200 dark:border-primary/20 shadow-lg shadow-primary/5 group active:scale-[0.98] transition-all">
+<div class="flex flex-col items-start">
+<p class="text-slate-500 dark:text-primary text-xs font-bold uppercase tracking-widest mb-1">Calories Remaining</p>
+<div class="flex items-baseline gap-2">
+<p class="text-slate-900 dark:text-white text-4xl font-black tracking-tight">1,240</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">kcal</p>
 </div>
-<div class="h-1.5 w-full bg-slate-200 dark:bg-white/10 rounded-full overflow-hidden">
-<div class="h-full bg-primary" style="width: 43%;"></div>
+<p class="text-slate-400 dark:text-slate-500 text-[10px] mt-2">Goal (BMR): 2,000 kcal</p>
 </div>
+<div class="flex flex-col items-end gap-2">
+<div class="p-3 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined font-bold">fastfood</span>
 </div>
-<div class="flex flex-col gap-2">
-<div class="flex justify-between text-xs font-semibold">
-<span class="text-slate-500 dark:text-slate-400">Carbs</span>
-<span class="text-slate-900 dark:text-white">120g / 200g</span>
+<span class="text-[10px] font-bold text-slate-400 dark:text-primary/60 group-hover:text-primary transition-colors uppercase tracking-tighter">Custom/Cheat</span>
 </div>
-<div class="h-1.5 w-full bg-slate-200 dark:bg-white/10 rounded-full overflow-hidden">
-<div class="h-full bg-blue-400" style="width: 60%;"></div>
-</div>
-</div>
+</button>
 </div>
 <!-- Quick Add Section -->
-<div class="bg-white dark:bg-white/5 rounded-t-3xl pt-6 pb-12">
-<div class="flex items-center justify-between px-6 mb-4">
+<div class="bg-white dark:bg-white/5 rounded-t-3xl pt-8 pb-12">
+<div class="flex items-center justify-between px-6 mb-6">
 <h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Quick Add</h3>
 <button class="text-primary text-sm font-semibold">Edit Presets</button>
 </div>
 <div class="grid grid-cols-2 gap-4 px-6">
-<!-- Preset Card 1 -->
-<button class="flex flex-col items-start gap-3 p-4 rounded-xl bg-slate-100 dark:bg-background-dark border border-transparent hover:border-primary transition-all text-left">
-<div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+<div class="flex flex-col gap-4 p-4 rounded-2xl bg-slate-100 dark:bg-background-dark border border-transparent hover:border-primary/30 transition-all">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center text-primary">
 <span class="material-symbols-outlined">breakfast_dining</span>
+</div>
+<div class="flex items-center bg-white/5 rounded-lg p-0.5 border border-white/10">
+<button class="w-6 h-6 flex items-center justify-center hover:text-primary active:scale-90"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="text-[10px] font-bold w-4 text-center">1</span>
+<button class="w-6 h-6 flex items-center justify-center hover:text-primary active:scale-90"><span class="material-symbols-outlined text-sm font-bold text-primary">add</span></button>
+</div>
 </div>
 <div>
 <p class="text-slate-900 dark:text-white text-sm font-bold leading-tight">Oatmeal</p>
-<p class="text-slate-500 dark:text-slate-400 text-xs mt-0.5">300 kcal</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-1">300 kcal</p>
 </div>
-</button>
-<!-- Preset Card 2 -->
-<button class="flex flex-col items-start gap-3 p-4 rounded-xl bg-slate-100 dark:bg-background-dark border border-transparent hover:border-primary transition-all text-left">
-<div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+</div>
+<div class="flex flex-col gap-4 p-4 rounded-2xl bg-slate-100 dark:bg-background-dark border border-transparent hover:border-primary/30 transition-all">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center text-primary">
 <span class="material-symbols-outlined">coffee</span>
+</div>
+<div class="flex items-center bg-white/5 rounded-lg p-0.5 border border-white/10">
+<button class="w-6 h-6 flex items-center justify-center hover:text-primary active:scale-90"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="text-[10px] font-bold w-4 text-center">2</span>
+<button class="w-6 h-6 flex items-center justify-center hover:text-primary active:scale-90"><span class="material-symbols-outlined text-sm font-bold text-primary">add</span></button>
+</div>
 </div>
 <div>
 <p class="text-slate-900 dark:text-white text-sm font-bold leading-tight">Black Coffee</p>
-<p class="text-slate-500 dark:text-slate-400 text-xs mt-0.5">5 kcal</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-1">10 kcal</p>
 </div>
-</button>
-<!-- Preset Card 3 -->
-<button class="flex flex-col items-start gap-3 p-4 rounded-xl bg-slate-100 dark:bg-background-dark border border-transparent hover:border-primary transition-all text-left">
-<div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+</div>
+<div class="flex flex-col gap-4 p-4 rounded-2xl bg-slate-100 dark:bg-background-dark border border-transparent hover:border-primary/30 transition-all">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center text-primary">
 <span class="material-symbols-outlined">shutter_speed</span>
+</div>
+<div class="flex items-center bg-white/5 rounded-lg p-0.5 border border-white/10">
+<button class="w-6 h-6 flex items-center justify-center hover:text-primary active:scale-90"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="text-[10px] font-bold w-4 text-center">0</span>
+<button class="w-6 h-6 flex items-center justify-center hover:text-primary active:scale-90"><span class="material-symbols-outlined text-sm font-bold text-primary">add</span></button>
+</div>
 </div>
 <div>
 <p class="text-slate-900 dark:text-white text-sm font-bold leading-tight">Protein Shake</p>
-<p class="text-slate-500 dark:text-slate-400 text-xs mt-0.5">180 kcal</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-1">180 kcal</p>
 </div>
-</button>
-<!-- Preset Card 4 -->
-<button class="flex flex-col items-start gap-3 p-4 rounded-xl bg-slate-100 dark:bg-background-dark border border-transparent hover:border-primary transition-all text-left">
-<div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+</div>
+<div class="flex flex-col gap-4 p-4 rounded-2xl bg-slate-100 dark:bg-background-dark border border-transparent hover:border-primary/30 transition-all">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center text-primary">
 <span class="material-symbols-outlined">nutrition</span>
+</div>
+<div class="flex items-center bg-white/5 rounded-lg p-0.5 border border-white/10">
+<button class="w-6 h-6 flex items-center justify-center hover:text-primary active:scale-90"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="text-[10px] font-bold w-4 text-center">1</span>
+<button class="w-6 h-6 flex items-center justify-center hover:text-primary active:scale-90"><span class="material-symbols-outlined text-sm font-bold text-primary">add</span></button>
+</div>
 </div>
 <div>
 <p class="text-slate-900 dark:text-white text-sm font-bold leading-tight">Green Apple</p>
-<p class="text-slate-500 dark:text-slate-400 text-xs mt-0.5">95 kcal</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs mt-1">95 kcal</p>
 </div>
-</button>
+</div>
 </div>
 </div>
 </main>
 <!-- Floating Action Button -->
-<div class="fixed bottom-8 right-6">
-<button class="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-background-dark shadow-lg shadow-primary/20 hover:scale-105 active:scale-95 transition-transform">
-<span class="material-symbols-outlined text-3xl font-bold">add</span>
-</button>
-</div>
+
 <!-- Bottom Navigation Bar (iOS style) -->
-<nav class="fixed bottom-0 w-full bg-white dark:bg-background-dark border-t border-slate-200 dark:border-white/5 px-6 py-3 flex justify-between items-center z-10">
-<button class="flex flex-col items-center gap-1 text-primary">
-<span class="material-symbols-outlined">dashboard</span>
-<span class="text-[10px] font-medium">Daily</span>
+<nav class="fixed bottom-0 left-0 right-0 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-xl border-t border-slate-200 dark:border-white/10 z-50">
+<div class="max-w-md mx-auto flex justify-around p-3">
+<button id="home" class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
 </button>
-<button class="flex flex-col items-center gap-1 text-slate-400">
-<span class="material-symbols-outlined">analytics</span>
-<span class="text-[10px] font-medium">Trends</span>
+<button id="history" class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined">history</span>
+<span class="text-[10px] font-medium">History</span>
 </button>
 <div class="w-16"></div> <!-- Spacer for FAB area if centered, but here FAB is offset -->
-<button class="flex flex-col items-center gap-1 text-slate-400">
-<span class="material-symbols-outlined">menu_book</span>
-<span class="text-[10px] font-medium">Recipes</span>
+<button id="Presets" class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">restaurant</span>
+<span class="text-[10px] font-medium">Presets</span>
 </button>
 <button id="setting" type="button" class="flex flex-col items-center gap-1 text-slate-400" >
 <span class="material-symbols-outlined">settings</span>

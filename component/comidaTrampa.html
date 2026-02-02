@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Add Custom Cheat Meal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2bee7c",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#102218",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Inter', sans-serif;
+            min-height: max(884px, 100dvh);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .neon-glow:focus-within {
+            box-shadow: 0 0 15px rgba(43, 238, 124, 0.2);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen flex flex-col items-center justify-start">
+<div class="w-full max-w-[430px] min-h-screen flex flex-col bg-background-light dark:bg-background-dark shadow-2xl overflow-hidden relative">
+<header class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10 border-b border-white/5">
+<div class="text-slate-900 dark:text-white flex size-12 shrink-0 items-center justify-start cursor-pointer">
+<span class="material-symbols-outlined">arrow_back_ios</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center font-display">Add Cheat Meal</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex size-12 cursor-pointer items-center justify-center rounded-lg bg-transparent text-primary">
+<span class="material-symbols-outlined">local_fire_department</span>
+</button>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto pb-40">
+<div class="px-4 pt-8 pb-4">
+<h1 class="text-slate-900 dark:text-white tracking-tight text-[32px] font-bold leading-tight font-display">Custom Entry</h1>
+<p class="text-slate-500 dark:text-[#9db9a8] text-sm mt-1">Log a deviation from your regular plan.</p>
+</div>
+<div class="px-4 py-3">
+<label class="flex flex-col w-full group">
+<p class="text-slate-700 dark:text-white text-base font-medium leading-normal pb-2 ml-1">Meal Description</p>
+<div class="relative neon-glow rounded-xl">
+<input autofocus="" class="form-input flex w-full rounded-xl text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary/50 border border-slate-200 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] h-16 placeholder:text-slate-400 dark:placeholder:text-[#9db9a8] px-4 text-lg font-normal font-display transition-all" placeholder="e.g., Double Bacon Burger" type="text"/>
+</div>
+</label>
+</div>
+<div class="px-4 py-3">
+<label class="flex flex-col w-full">
+<p class="text-slate-700 dark:text-white text-base font-medium leading-normal pb-2 ml-1">Estimated Calories</p>
+<div class="flex w-full items-stretch rounded-xl neon-glow">
+<input class="form-input flex w-full min-w-0 flex-1 rounded-l-xl text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary/50 border border-slate-200 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] h-16 placeholder:text-slate-400 dark:placeholder:text-[#9db9a8] px-4 border-r-0 text-2xl font-bold font-display transition-all" placeholder="0" type="number"/>
+<div class="flex items-center justify-center px-4 rounded-r-xl border border-slate-200 dark:border-[#3b5445] bg-white dark:bg-[#1c2720] border-l-0 text-slate-500 dark:text-[#9db9a8] font-bold">
+                            kcal
+                        </div>
+</div>
+</label>
+</div>
+<div class="px-4 py-6">
+<div class="flex items-center justify-between mb-4 px-1">
+<p class="text-slate-700 dark:text-white text-base font-bold font-display">Recent &amp; Frequents</p>
+<span class="text-primary text-xs font-bold uppercase tracking-wider cursor-pointer">View All</span>
+</div>
+<div class="grid grid-cols-1 gap-3">
+<div class="flex items-center justify-between p-4 rounded-2xl bg-white dark:bg-[#1c2720] border border-slate-200 dark:border-[#3b5445] hover:border-primary/50 transition-colors cursor-pointer group">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">lunch_dining</span>
+</div>
+<div>
+<p class="text-slate-900 dark:text-white text-sm font-bold font-display">Double Burger</p>
+<p class="text-slate-500 dark:text-[#9db9a8] text-xs">850 kcal</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity">add_circle</span>
+</div>
+<div class="flex items-center justify-between p-4 rounded-2xl bg-white dark:bg-[#1c2720] border border-slate-200 dark:border-[#3b5445] hover:border-primary/50 transition-colors cursor-pointer group">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">local_pizza</span>
+</div>
+<div>
+<p class="text-slate-900 dark:text-white text-sm font-bold font-display">Pizza Slice</p>
+<p class="text-slate-500 dark:text-[#9db9a8] text-xs">280 kcal</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity">add_circle</span>
+</div>
+<div class="flex items-center justify-between p-4 rounded-2xl bg-white dark:bg-[#1c2720] border border-slate-200 dark:border-[#3b5445] hover:border-primary/50 transition-colors cursor-pointer group">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">icecream</span>
+</div>
+<div>
+<p class="text-slate-900 dark:text-white text-sm font-bold font-display">Ice Cream</p>
+<p class="text-slate-500 dark:text-[#9db9a8] text-xs">320 kcal</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity">add_circle</span>
+</div>
+</div>
+</div>
+<div class="px-4 py-2">
+<p class="text-slate-700 dark:text-white text-sm font-semibold mb-3 ml-1">Category Presets</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-2 rounded-full bg-slate-200 dark:bg-white/10 text-slate-700 dark:text-white text-xs font-medium border border-transparent hover:border-primary transition-colors cursor-pointer">Fast Food</span>
+<span class="px-4 py-2 rounded-full bg-slate-200 dark:bg-white/10 text-slate-700 dark:text-white text-xs font-medium border border-transparent hover:border-primary transition-colors cursor-pointer">Dessert</span>
+<span class="px-4 py-2 rounded-full bg-slate-200 dark:bg-white/10 text-slate-700 dark:text-white text-xs font-medium border border-transparent hover:border-primary transition-colors cursor-pointer">Alcohol</span>
+<span class="px-4 py-2 rounded-full bg-slate-200 dark:bg-white/10 text-slate-700 dark:text-white text-xs font-medium border border-transparent hover:border-primary transition-colors cursor-pointer">Late Night</span>
+</div>
+</div>
+<div class="px-4 py-6">
+<div class="p-5 flex items-center justify-between gap-4 rounded-2xl bg-slate-100 dark:bg-[#1c2720] border border-slate-200 dark:border-[#3b5445]">
+<div class="flex flex-col gap-1 flex-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">info</span>
+<p class="text-slate-900 dark:text-white text-base font-bold leading-tight font-display">Impact Summary</p>
+</div>
+<p class="text-slate-500 dark:text-[#9db9a8] text-sm font-normal leading-normal mt-1">This meal will use 45% of your remaining daily budget.</p>
+</div>
+<div class="size-16 bg-primary/20 rounded-xl flex items-center justify-center relative overflow-hidden shrink-0">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/30 to-transparent"></div>
+<span class="material-symbols-outlined text-primary text-2xl">trending_down</span>
+</div>
+</div>
+</div>
+</main>
+<div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background-light dark:from-background-dark via-background-light dark:via-background-dark to-transparent">
+<button class="w-full bg-primary hover:bg-primary/90 text-background-dark h-16 rounded-2xl flex items-center justify-center gap-3 transition-all active:scale-95 shadow-lg shadow-primary/20">
+<span class="text-lg font-black uppercase tracking-wider font-display">Add to Log</span>
+<span class="material-symbols-outlined font-bold">add_task</span>
+</button>
+<div class="h-4"></div>
+</div>
+</div>
+
+</body></html>
